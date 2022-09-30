@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCount2((prevCounter) => prevCounter + 1);
-    }, 100);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
