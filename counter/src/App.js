@@ -37,7 +37,7 @@ function App() {
       <h1>React Counter</h1>
       <div>
         <h1 className="hoo">{count2}</h1>
-        <button className="btn">Increment Counter</button>
+       
         <button onClick={decrement} className="btn">
           Decrement Counter
         </button>
