@@ -11,12 +11,16 @@ function App() {
   };
  */
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCount2((prevCounter) => prevCounter + 1);
+    let interval = setInterval(() => {
+      setCount2((count2) => {
+        if (count2 === 60) {
+          clearInterval(interval);
+          return count2;
+        }
+        return count2 + .5;
+      });
     }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
+  },[]);
 
   const decrement = () => {
     if (count2 <= 0) {
@@ -33,9 +37,7 @@ function App() {
       <h1>React Counter</h1>
       <div>
         <h1 className="hoo">{count2}</h1>
-        <button  className="btn">
-          Increment Counter
-        </button>
+        <button className="btn">Increment Counter</button>
         <button onClick={decrement} className="btn">
           Decrement Counter
         </button>
