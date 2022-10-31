@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+//import "./App.css";
+import Signup from "./pages/Signup";
+//import Login from "./pages/Login";
 
 function App() {
-  let [count2, setCount2] = useState(0);
+ /*  let [count2, setCount2] = useState(0);
   let [inc, setInc] = useState(false);
-
+ */
   /* const increment2 = () => { 
     setInc(true);
     setCount2((count2) =>count2 + 1);
   };
  */
-  useEffect(() => {
+ /*  useEffect(() => {
     let interval = setInterval(() => {
       setCount2((count2) => {
         if (count2 === 60) {
@@ -20,9 +22,9 @@ function App() {
         return count2 + .5;
       });
     }, 1000);
-  },[]);
+  },[]); */
 
-  const decrement = () => {
+  /* const decrement = () => {
     if (count2 <= 0) {
       setCount2(65);
     } else if (inc === true) {
@@ -30,20 +32,22 @@ function App() {
     }
     setCount2((count2) => count2 - 5);
     setInc(false);
-  };
+  }; */
 
   return (
-    <div className="App">
-      <h1>React Counter</h1>
+    <div >
+     <Signup />
+
+     {/*  <h1>React Counter</h1>
       <div>
         <h1 className="hoo">{count2}</h1>
        
         <button onClick={decrement} className="btn">
           Decrement Counter
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
 
-export default App;
+export default App();
