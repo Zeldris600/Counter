@@ -20,7 +20,7 @@ const Signup = () => {
     <span class="loginwith">Sign in with<br />social network</span>
     
    <p>Already have an account?</p>
-   <button class="social-signin twitter"><Link to='/login'> Log in</Link></button>
+   <button class="social-signin blue"><Link to='/login'> Log in</Link></button>
     <button class="social-signin google">Log in with Google</button>
   </div>
   <div class="or">OR</div>
